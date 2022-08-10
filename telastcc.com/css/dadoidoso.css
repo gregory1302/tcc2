@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+body {
+    background-color: #AECAEF;
+    background-size: cover;
+   
+}
+
+.tabela-conteiner {
+   display: flex;
+}
+/* dado do idoso */
+.um {
+    width: 600px;
+    margin-left: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+
+}
+/* dado do responsavel */
+.dois {
+    width: 600px;
+    margin-left: 40px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+
+}
+/* tamanho da tabela */
+td.pergunta {
+    width: 300px;
+}
+/* configurações dos botoes */
+.botoes {
+    margin-top: 40px;
+    border-radius: 12px;
+    height: 50px;
+    width: 100px;
+    position: fixed;
+    align-items: center;
+    color: inherit;
+    left: 88%;
+}
+
+a#cadastro {
+    margin-top: 20px;
+}
+
+/* configurações do "dadomedidoso" */
+.remedio {
+    display: flex;
+    opacity: 1;
+    margin-right: 25px;
+    margin-left: 25px;
+    border-radius: 10px;
+}
+
+
+/* css recebe idoso */
+
+#recebeidoso {
+    width: 600px;
+    margin-left: 40px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+#receberesp {
+    width: 600px;
+    margin-left: 40px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/*
+.tabela-conteiner#1 {
+    display: flex;
+}
+
+.remedio {
+    opacity: 1;
+    width: 700px;
+    margin-left: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+    background-color: #ccc; 
+  }
+  
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+  }*/

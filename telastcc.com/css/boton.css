@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;}
+
+
+        .botao{
+            margin-top: 20px;
+         border-radius: 12px;
+         height: 50px;
+         width: 100px;
+         display: flex;
+         position: fixed;
+         align-items: center;
+         color: inherit;
+         left: 87%;
+         font-size: 20px;
+         
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+        .botao a{
+            color:inherit;
+            margin-left: auto;
+            margin-right: auto;
+        }
