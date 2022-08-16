@@ -16,6 +16,9 @@
 
             <label>Medicamento: <select name="idremedio"></label>
             <option>Selecione</option>
+                <option value=<?php echo $linha['idremedio'] ?>>
+                    <?php echo $linha['nome_remed'] . ' - ' . $linha['obs'] ?>
+                </option>
             <?php $sql = "select * from medicamentos ";
             $rs = mysqli_query($con, $sql);
             while ($linha = mysqli_fetch_array($rs)) { ?>
