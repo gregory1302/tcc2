@@ -18,10 +18,11 @@
     include("conexao.php");
     $ididoso = $_POST['ididoso'];
     $idremedio = $_POST['idremedio'];
-    $horario = $_POST['horario'];
-    $dosagem = $_POST['dosagem'];
-    $datainicial = $_POST['datainicial'];
-    $datafinal = $_POST['datafinal'];
+    // $horario = $_POST['horario'];
+    $posologia = $_POST['posologia'];
+    $periodo = $_POST['periodo'];
+    // $datainicial = $_POST['datainicial'];
+    // $datafinal = $_POST['datafinal'];
     $obs = $_POST['obs'];
 
 
@@ -45,23 +46,22 @@
                 $rs = mysqli_query($con, $sql);
                 while ($linha = mysqli_fetch_array($rs)) {
                 ?> <td> <?php echo $linha['nome_remed'];
-                        } ?></tr>
-                    <td> <?php echo 'Horario: '; ?></td>
-                    <td> <?php echo $horario; ?></tr>
-                    <td> <?php echo 'Dosagem: '; ?></td>
-                    <td> <?php echo $dosagem; ?></tr>
-                    <td> <?php echo 'Data Inicial: '; ?></td>
-                    <td> <?php echo $datainicial; ?></tr>
-                    <td> <?php echo 'Data Final: '; ?></td>
-                    <td> <?php echo $datafinal; ?></tr>
+                    } ?></tr>
+
+                    <td> <?php echo 'Posologia: '; ?></td>
+                    <td> <?php echo $posologia . ' - ' . 'comprimidos'; ?></tr>
+                    <td> <?php echo 'Periodo: '; ?></td>
+                    <td> <?php echo $periodo . ' - ' . 'dias'; ?></tr>
+
                     <td> <?php echo 'Observação: '; ?></td>
                     <td> <?php echo $obs; ?></tr>
 
-                        <?php $sql = "INSERT INTO utiliza (ididoso, idremedio, data_inicio, data_fim, dosagem, horario, obs)
-    VALUES ('$ididoso', '$idremedio', '$datainicial', '$datafinal', '$dosagem', '$horario', '$obs')";
+                        <?php $sql = "INSERT INTO utiliza (ididoso, idremedio, posologia, periodo, obs)
+    VALUES ('$ididoso', '$idremedio', $posologia, '$periodo', '$obs')";
                         mysqli_query($con, $sql);
                         //echo $sql;
                         mysqli_close($con);
+                        echo $sql;
                         ?>
 
 </body>

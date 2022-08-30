@@ -17,7 +17,7 @@
 <body>
 
 	<?php
-	include('home.html');
+	include('navbar.html');
 	include('conexao.php');
 	if (isset($_POST['submit'])) {
 		include_once('conexao.php');
@@ -34,10 +34,10 @@
 
 	?>
 	<div class="botoes">
-		<a id="cadastro" style=" padding: 25; width: 70px; height: 70px" class='btn btn-warning btn-sm' href='cadastromedicamentos.php?ididoso=<?php echo $ididoso ?>'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+		<a id="cadastro" style=" padding: 25; width: 10px; height: 10px" class='btn btn-warning btn-sm' href='cadastromedicamentos.php?ididoso=<?php echo $ididoso ?>'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
 				<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z" />
 			</svg></a>
-		<a id="cadastro" style="padding: 25; width: 70px; height: 70px" class='btn btn-warning btn-sm' href='dadomedidoso.php?ididoso=<?php echo $ididoso ?>'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule" viewBox="0 0 16 16">
+		<a id="cadastro" style="padding: 25; width: 10px; height: 10px" class='btn btn-warning btn-sm' href='dadomedidoso.php?ididoso=<?php echo $ididoso ?>'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule" viewBox="0 0 16 16">
 				<path fill-rule="evenodd" d="M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429l4.243 4.242Z" />
 			</svg></a>
 	</div>
@@ -46,6 +46,14 @@
 	$rs = mysqli_query($con, $sql);
 	while ($linha = mysqli_fetch_array($rs)) {
 	?>
+		<?php
+		$genero = $linha['genero'];
+		if ($genero == 'F') {
+			$genero = 'Feminino';
+		} elseif ($genero == 'M') {
+			$genero = 'Masculino';
+		}
+		?>
 		<div class="tabela-conteiner">
 			<div class="um">
 				<table class="table table-info table-bordered">
@@ -61,7 +69,7 @@
 						<td class="pergunta"> <?php echo 'CPF do paciente: '; ?></td>
 						<td> <?php echo $linha['cpf']; ?></tr>
 						<td class="pergunta"> <?php echo 'Genero: '; ?></td>
-						<td> <?php echo $linha['genero']; ?></tr>
+						<td> <?php echo $genero; ?></tr>
 						<td class="pergunta"> <?php echo 'Alergias: '; ?></td>
 						<td> <?php echo $linha['alergia']; ?></tr>
 						<td class="pergunta"> <?php echo 'Comorbidades: '; ?></td>

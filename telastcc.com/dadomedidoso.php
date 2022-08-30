@@ -14,13 +14,15 @@
 
 <body>
     <?php
-    include("home.html");
+    include("navbar.html");
     include("conexao.php");
-    $ididoso = $_GET['ididoso'];
-    $sql = "select * from utiliza, medicamentos where utiliza.idremedio = medicamentos.idremedio and ididoso=$ididoso";
-    $rs = mysqli_query($con, $sql);
-    while ($linha = mysqli_fetch_array($rs)) { ?>
-        <div class="tabela-conteiner">
+    $ididoso = $_GET['ididoso']; ?>
+
+    <div class="tabela-conteiner">
+        <?php
+        $sql = "select * from utiliza, medicamentos where utiliza.idremedio = medicamentos.idremedio and ididoso=$ididoso";
+        $rs = mysqli_query($con, $sql);
+        while ($linha = mysqli_fetch_array($rs)) { ?>
             <div class="remedio">
                 <table class="table table-info table-bordered">
 
@@ -34,19 +36,16 @@
 
                             ?>
 
-                        <td> <?php echo 'Data Inicial: '; ?></td>
-                        <td> <?php echo $linha['data_inicio']; ?></tr>
-                        <td> <?php echo 'Data Final: '; ?></td>
-                        <td> <?php echo $linha['data_fim']; ?></tr>
+                        <td> <?php echo 'Periodo: '; ?></td>
+                        <td> <?php echo $linha['periodo']; ?></tr>
                         <td> <?php echo 'Dosagem: '; ?></td>
                         <td> <?php echo $linha['dosagem']; ?></tr>
-                        <td> <?php echo 'Horario: '; ?></td>
-                        <td> <?php echo $linha['horario']; ?></tr>
                         <td> <?php echo 'Observaçôes: '; ?></td>
                         <td> <?php echo $linha['obs']; ?></tr><br> <?php } ?>
 
                 </table>
             </div>
+    </div>
 </body>
 
 </html>

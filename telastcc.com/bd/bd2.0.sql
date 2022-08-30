@@ -2,7 +2,7 @@
 -- Servidor:                     127.0.0.1
 -- Versão do servidor:           10.4.22-MariaDB - mariadb.org binary distribution
 -- OS do Servidor:               Win64
--- HeidiSQL Versão:              12.0.0.6468
+-- HeidiSQL Versão:              12.1.0.6537
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -31,11 +31,11 @@ CREATE TABLE IF NOT EXISTS `estoque` (
 CREATE TABLE IF NOT EXISTS `idosos` (
   `ididoso` int(11) NOT NULL AUTO_INCREMENT,
   `nome_idoso` varchar(50) NOT NULL,
-  `nascimento` date NOT NULL,
+  `nascimento` date DEFAULT NULL,
   `genero` varchar(1) NOT NULL DEFAULT '',
   `alergia` varchar(50) NOT NULL,
   `comorbidade` varchar(50) NOT NULL,
-  `obs` varchar(50) NOT NULL,
+  `obs` varchar(50) DEFAULT NULL,
   `numero_sus` int(11) NOT NULL DEFAULT 0,
   `cpf` int(11) NOT NULL DEFAULT 0,
   `plano_saude` varchar(3) NOT NULL DEFAULT '',
@@ -45,9 +45,9 @@ CREATE TABLE IF NOT EXISTS `idosos` (
   `parentesco` varchar(50) NOT NULL,
   `endereco_resp` varchar(50) NOT NULL,
   PRIMARY KEY (`ididoso`)
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb4;
 
--- Copiando dados para a tabela medlar.idosos: ~8 rows (aproximadamente)
+-- Copiando dados para a tabela medlar.idosos: ~10 rows (aproximadamente)
 REPLACE INTO `idosos` (`ididoso`, `nome_idoso`, `nascimento`, `genero`, `alergia`, `comorbidade`, `obs`, `numero_sus`, `cpf`, `plano_saude`, `nome_resp`, `telefone_resp`, `cpf_resp`, `parentesco`, `endereco_resp`) VALUES
 	(1, 'jurema', '2021-12-14', 'F', 'pao', 'asma', 'sla', 92838, 8323284, 'sim', 'rogerio', 123245, '0', 'vo', 'av inacio pinto'),
 	(2, 'jeremias', '2021-12-08', 'M', 'leite', 'auzaimer', 'sla', 34364757, 346547, 'nao', 'caio', 239356, '0', 'sobrinho', 'sao paulo'),
@@ -56,12 +56,15 @@ REPLACE INTO `idosos` (`ididoso`, `nome_idoso`, `nascimento`, `genero`, `alergia
 	(13, 'rodiscleyson', '2022-03-28', 'M', 'trigo', 'asma', 'sla', 23242356, 2147483647, 'sim', 'carlos', 2147483647, '0', 'tio', 'ifdsiogfgdgfg'),
 	(41, 'cleide', '1922-03-14', 'F', 'camarao', 'auzaimer', 'not have', 2147483647, 2147483647, 'nao', 'greg', 2147483647, '0', 'conhecido', 'embaixo da ponte'),
 	(49, 'jonas', '2022-08-03', 'M', 'leite', 'auzaimer', 'sla', 34364757, 346547, 'sim', 'caio', 239356, '43563464', 'sobrinho', 'sao paulo'),
-	(58, 'pedro', '2022-08-31', 'M', 'peixe', 'epatite', 'nao sei', 34364757, 32978562, 'sim', 'caio', 23935637, '', 'sobrinho', 'sao paulo');
+	(58, 'pedro', '2022-08-31', 'M', 'peixe', 'epatite', 'nao sei', 34364757, 32978562, 'sim', 'caio', 23935637, '', 'sobrinho', 'sao paulo'),
+	(59, 'josicleide', '2022-08-17', 'F', 'leite', 'auzaimer', 'sla', 343647, 346547, 'sim', 'caio', 23935637, '43563464', 'sobrinho', 'sao paulo'),
+	(60, '', '0000-00-00', '', '', '', '', 0, 0, '', '', 0, '', '', '');
 
 -- Copiando estrutura para tabela medlar.medicamentos
 CREATE TABLE IF NOT EXISTS `medicamentos` (
   `idremedio` int(11) NOT NULL AUTO_INCREMENT,
   `nome_remed` varchar(50) NOT NULL DEFAULT '',
+  `dosagem` varchar(50) NOT NULL,
   `descricao` varchar(50) NOT NULL DEFAULT '',
   `categoria` varchar(50) NOT NULL DEFAULT '',
   `obs` varchar(50) NOT NULL,
@@ -69,25 +72,23 @@ CREATE TABLE IF NOT EXISTS `medicamentos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4;
 
 -- Copiando dados para a tabela medlar.medicamentos: ~7 rows (aproximadamente)
-REPLACE INTO `medicamentos` (`idremedio`, `nome_remed`, `descricao`, `categoria`, `obs`) VALUES
-	(1, 'paracetamol', 'dores', 'dsfs', 'sla'),
-	(2, 'clonazepam', 'fsgfsfdgs', 'oasdjs', 'sla'),
-	(3, 'doril', 'dores', 'dsfs', 'sla'),
-	(31, 'doril', 'dores', 'dsfs', 'sla'),
-	(32, 'buscopan', 'dor renal', 'generico', 'nao sei'),
-	(33, 'paracetamol', 'dor de cabeça', 'b', 'nao tomar muito'),
-	(36, 'paracetamol', 'dor de cabeça', 'b', 'nao tomar muito');
+REPLACE INTO `medicamentos` (`idremedio`, `nome_remed`, `dosagem`, `descricao`, `categoria`, `obs`) VALUES
+	(1, 'paracetamol', '', 'dores', 'dsfs', 'sla'),
+	(2, 'clonazepam', '', 'fsgfsfdgs', 'oasdjs', 'sla'),
+	(3, 'doril', '', 'dores', 'dsfs', 'sla'),
+	(31, 'doril', '', 'dores', 'dsfs', 'sla'),
+	(32, 'buscopan', '', 'dor renal', 'generico', 'nao sei'),
+	(33, 'paracetamol', '', 'dor de cabeça', 'b', 'nao tomar muito'),
+	(36, 'paracetamol', '', 'dor de cabeça', 'b', 'nao tomar muito');
 
 -- Copiando estrutura para tabela medlar.utiliza
 CREATE TABLE IF NOT EXISTS `utiliza` (
   `idutiliza` int(11) NOT NULL AUTO_INCREMENT,
   `ididoso` int(11) NOT NULL DEFAULT 0,
   `idremedio` int(11) NOT NULL,
-  `data_inicio` datetime NOT NULL,
-  `data_fim` datetime NOT NULL,
   `posologia` int(2) NOT NULL DEFAULT 0,
+  `periodo` varchar(50) NOT NULL DEFAULT '0',
   `obs` varchar(50) DEFAULT NULL,
-  `dosagem` int(5) NOT NULL DEFAULT 0,
   PRIMARY KEY (`idutiliza`),
   KEY `FK_utiliza_idosos` (`ididoso`),
   KEY `idremedio` (`idremedio`),
@@ -96,13 +97,13 @@ CREATE TABLE IF NOT EXISTS `utiliza` (
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4;
 
 -- Copiando dados para a tabela medlar.utiliza: ~6 rows (aproximadamente)
-REPLACE INTO `utiliza` (`idutiliza`, `ididoso`, `idremedio`, `data_inicio`, `data_fim`, `posologia`, `obs`, `dosagem`) VALUES
-	(18, 1, 1, '2022-05-04 00:00:00', '2022-05-04 00:00:00', 0, 'sla', 0),
-	(19, 1, 2, '2022-05-03 00:00:00', '2022-05-18 00:00:00', 0, 'sla', 0),
-	(20, 1, 3, '2022-05-03 00:00:00', '2022-05-18 00:00:00', 0, 'sla', 0),
-	(33, 2, 1, '2022-05-05 00:00:00', '2022-05-20 00:00:00', 0, 'sla', 0),
-	(38, 58, 2, '2022-08-09 00:00:00', '2022-08-25 00:00:00', 0, 'nao sei', 100),
-	(40, 58, 32, '2022-09-06 00:00:00', '2022-09-07 00:00:00', 0, 'sla', 0);
+REPLACE INTO `utiliza` (`idutiliza`, `ididoso`, `idremedio`, `posologia`, `periodo`, `obs`) VALUES
+	(18, 1, 1, 0, '0', 'sla'),
+	(19, 1, 2, 0, '0', 'sla'),
+	(20, 1, 3, 0, '0', 'sla'),
+	(33, 2, 1, 0, '0', 'sla'),
+	(38, 58, 2, 0, '0', 'nao sei'),
+	(40, 58, 32, 0, '0', 'sla');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

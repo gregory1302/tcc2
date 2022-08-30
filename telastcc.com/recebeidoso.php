@@ -17,12 +17,11 @@
 
 <body>
   <?php
-  include('home.html');
+  include('navbar.html');
   include("conexao.php");
 
   $nome = $_POST['nome'];
   $nasceu = $_POST['nascimento'];
-  $enfermeira = $_POST['enfermeira'];
   $cpf = $_POST['cpf'];
   $planosaude = $_POST['planosaude'];
   $genero = $_POST['genero'];
@@ -35,8 +34,8 @@
   $cpf_resp = $_POST['cpf_resp'];
   $parentesco = $_POST['parentesco'];
   $enderecoresp = $_POST['enderecoresp'];
-  $sql = "INSERT INTO idosos (nome_idoso, nascimento, genero, enfermeira, alergia, comorbidade, obs, numero_sus, cpf, plano_saude, nome_resp, telefone_resp, cpf_resp, parentesco, endereco_resp) 
-    VALUES ('$nome', '$nasceu', '$genero', '$enfermeira', '$alergia', '$comorbidade',  '$obs', '$numerosus', '$cpf', '$planosaude', '$nomeresp', '$telefoneresp', '$cpf_resp', '$parentesco', '$enderecoresp')";
+  $sql = "INSERT INTO idosos (nome_idoso, nascimento, genero, alergia, comorbidade, obs, numero_sus, cpf, plano_saude, nome_resp, telefone_resp, cpf_resp, parentesco, endereco_resp) 
+    VALUES ('$nome', '$nasceu', '$genero', '$alergia', '$comorbidade',  '$obs', '$numerosus', '$cpf', '$planosaude', '$nomeresp', '$telefoneresp', '$cpf_resp', '$parentesco', '$enderecoresp')";
   /*echo $sql;*/
   mysqli_query($con, $sql);
   echo "usuario inserido com sucesso"; ?>
@@ -44,22 +43,10 @@
   <div class="tabela-conteiner">
     <table id="recebeidoso" class="table table-info table-bordered">
       <thead>
-        <?php /*<td><?php echo "<br>Nome: $nome <br>"; ?></tr>
-        <td><?php echo "Nasceu: $nasceu <br>"; ?></tr>
-        <td><?php echo "Enfermeira: $enfermeira <br>"; ?></tr>
-        <td><?php echo "CPF: $cpf <br>"; ?></tr>
-        <td><?php echo "Plano de saúde: $planosaude <br>"; ?></tr>
-        <td><?php echo "Genero: $genero <br>"; ?></tr>
-        <td><?php echo "Alergia: $alergia <br>"; ?></tr>
-        <td><?php echo "Comorbidade: $comorbidade <br>"; ?></tr>
-        <td><?php echo "Numero sus: $numerosus <br>"; ?></tr>
-        <td><?php echo "Observações: $obs <br><br>"; ?></tr> */ ?>
         <td> <?php echo 'nome: '; ?></td>
         <td> <?php echo $nome; ?></tr>
         <td> <?php echo 'Data de Nascimento: '; ?></td>
         <td> <?php echo $nasceu; ?></tr>
-        <td> <?php echo 'Enfermeira Responsavel: '; ?></td>
-        <td> <?php echo $enfermeira; ?></tr>
         <td> <?php echo 'CPF do paciente: '; ?></td>
         <td> <?php echo $cpf; ?></tr>
         <td> <?php echo 'Genero: '; ?></td>
@@ -73,14 +60,7 @@
         <td> <?php echo 'Observações: '; ?></td>
         <td> <?php echo $obs; ?></tr>
       </thead>
-    </table><?php /*
-    <table class="table table-info table-bordered">
-      <td><?php echo "Informações do Responsavel<br>"; ?></tr>
-      <td><?php echo "Nome: $nomeresp <br>"; ?></tr>
-      <td><?php echo "telefone:$telefoneresp <br>"; ?></tr>
-      <td><?php echo "Parentesco: $parentesco <br>"; ?></tr>
-      <td><?php echo "Endereço: $enderecoresp <br>"; ?></tr>
-    </table> */ ?>
+    </table>
     <table id="receberesp" class="table table-primary table-bordered">
       <td> <?php echo 'Nome do Responsavel: '; ?></td>
       <td> <?php echo $nomeresp; ?></tr>
