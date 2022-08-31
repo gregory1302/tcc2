@@ -23,7 +23,7 @@
     <div class='container' id="cad-conteiner3">
         <form action="recebeestoque.php" method="POST">
 
-            <label>Medicamento: <select class='form-control' name="idremedio"></label>
+            <label>Medicamento <select class='form-control' name="idremedio"></label>
             <option>Selecione</option>
             <?php $sql = "select * from medicamentos ";
             $rs = mysqli_query($con, $sql);
@@ -33,9 +33,9 @@
                 </option>
             <?php } ?> </select>
             <BR>
-            <label>Quantidade de caixas:</label> <br><input class='form-control' type="text" name="quant_caixa">
-            <label>Quantidade de remedios em cada caixa:</label> <br><input class='form-control' type="text" name="unid_caixa">
-            <label>Observação:</label> <br><input class='form-control' type="text" name="obs"><br>
+            <label>Quantidade de caixas</label> <br><input class='form-control' type="text" name="quant_caixa">
+            <label>Quantidade de remedios em cada caixa</label> <br><input class='form-control' type="text" name="unid_caixa">
+            <label>Observação</label> <br><input class='form-control' type="text" name="obs"><br>
 
             <input class='btn btn-success' type="submit" value="Enviar" name="btnSalvar" />
             <input class='btn btn-info' type="reset" value="Limpar campos" />

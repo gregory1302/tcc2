@@ -13,45 +13,51 @@
     margin-left: 170px;
    
 }
-h3 {
-    text-align: center;
-}
+
 a:hover {
     color: royalblue;
 }
 #cad-conteiner {
     background-color: #72cdfe;
     display: flex;
-    width: 1300px;
+    width: 1250px;
     height: 600px;
     border-radius: 10px;
     margin-left: 50px;
     margin-top: 7vh;
 }
 .idoso{
-
-    width: 650px;
-    
-    padding: 50px 70px;
+    background-color: green;
     margin-left: 10px;
+
+}
+
+.idoso1{
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: left;
-    
+    width: 400px;
+    height: 580px;
+    padding: 50px 70px;
+margin-left: 30px;
+background: blue;
 }
 .idoso2{
-
-    width: 650px;
-    
+    margin-top: 10px;
+    margin-bottom: 10px;
+background-color: red;
+    width: 400px;
     padding: 50px 70px;
-    margin-left: 10px;
-    margin-top: 40px;
     text-align: left;
 }
-.resp{
-    width: 650px;
-    
-    padding: 50px 70px;
-    margin-left: 10px;
 
+.resp{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 400px;
+    background-color: pink;
+    padding: 50px 70px;
+    margin-right: 10px;
     text-align: left;
 }
 #cad-conteiners {
@@ -65,6 +71,25 @@ a:hover {
     border-radius: 10px;
     text-align: justify;
 }
+.radio {
+    /* background-color: #fff; */
+    border-radius: 10px;
+    display: inline-block;
+}
+#botao {
+    margin-top: 30px;
+}
+.gen {
+    /* margin-left: 30px; */
+}
+/*input{
+     width: 50px; */
+/* }
+.titulo{
+    background-color: aquamarine;
+    display: flex;
+    text-align: center;
+} */
 #cad-conteiner3 {
    /* background-color: rgb(99, 149, 240);*/
     background-color: #72cdfe;

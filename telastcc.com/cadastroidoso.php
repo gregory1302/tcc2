@@ -20,38 +20,59 @@
 	<div id="cad-conteiner">
 		<div class="idoso">
 			<form action="recebeidoso.php" method="POST">
-				<h3>Informações do Idoso</h3>
-				<label>Nome:</label> <input class='form-control' type="text" name="nome">
-				<label>Data de Nascimento:</label><br> <input class='form-control' type="date" size="25" placeholder="__/__/____" name="nascimento"> <br>
-				<label>Numero do CPF:</label> <br><input class='form-control' type="text" name="cpf">
-				<label>Plano de Saude:</label><br>
-				<input type="radio" name="planosaude" value="sim">sim
-				<input type="radio" name="planosaude" value="nao">nao
-				<label>Genero:</label><br>
-				<input type="radio" name="genero" value="F">Feminino
-				<input type="radio" name="genero" value="M">Masculino
-				<input type="radio" name="genero" value="O">Outro
+
+				<div class="idoso1">
+					<div class="titulo">
+						<!-- <h3>Idoso</h3> -->
+					</div>
+
+					<label>Nome</label> <input class='form-control' type="text" name="nome">
+					<label>Data de Nascimento</label><br> <input class='form-control' type="date" size="25" placeholder="__/__/____" name="nascimento">
+					<label>Numero do CPF</label> <br><input class='form-control' type="text" name="cpf">
+
+					<label>Plano de Saude</label><br>
+
+					<div class="gen">
+						<div class="radio">
+							<input type="radio" name="planosaude" value="sim">sim
+						</div>
+						<div class="radio">
+							<input type="radio" name="planosaude" value="nao">nao
+						</div>
+
+						<label>Genero:</label><br>
+						<div class="radio">
+							<input type="radio" name="genero" value="F">Feminino
+						</div><br>
+
+						<div class="radio"><input type="radio" name="genero" value="M">Masculino</div><br>
+
+						<div class="radio"><input type="radio" name="genero" value="O">Outro</div>
+
+					</div>
+				</div>
 		</div>
 		<div class="idoso2">
-			<label>Alergias:</label><br> <input class='form-control' type="text" name="alergia">
-			<label>Comorbidades:</label> <input class='form-control' type="text" name="comorbidade">
-			<label>Numero do SUS:</label> <input class='form-control' type="text" name="numerosus">
-			<label>Observação:</label> <input class='form-control' type="text" name="obs">
+			<label>Alergias</label><br> <input class='form-control' type="text" name="alergia">
+			<label>Comorbidades</label> <input class='form-control' type="text" name="comorbidade">
+			<label>Numero do SUS</label> <input class='form-control' type="text" name="numerosus">
+			<label>Observação</label> <input class='form-control' type="text" name="obs">
 
 		</div>
 
 		<div class="resp">
-			<h3>Responsavel:</h3>
-			<label>Nome:</label><input class='form-control' type="text" name="nomeresp">
-			<label>CPF do Responsavel:</label><input class='form-control' type="text" name="cpf_resp">
-			<label>Telefone:</label><br><input class='form-control' type="text" name="telefoneresp">
-			<label>Grau de Parentesco:</label><input class='form-control' type="text" name="parentesco">
-			<label>Endereço:</label><br><input class='form-control' type="text" name="enderecoresp">
-			<input class='btn btn-success' type="submit" value="Enviar" name="btnSalvar" />
-			<input class='btn btn-info' type="reset" value="Limpar campos" />
+			<div class="titulo">
+				<!-- <h3>Responsavel</h3> -->
+			</div>
+			<label>Nome do Responsavel:</label><input class='form-control' type="text" name="nomeresp">
+			<label>CPF do Responsavel</label><input class='form-control' type="text" name="cpf_resp">
+			<label>Telefone</label><br><input class='form-control' type="text" name="telefoneresp">
+			<label>Grau de Parentesco</label><input class='form-control' type="text" name="parentesco">
+			<label>Endereço</label><br><input class='form-control' type="text" name="enderecoresp">
+			<input id="botao" class='btn btn-success' type="submit" value="Enviar" name="btnSalvar" />
+			<input id="botao" class='btn btn-info' type="reset" value="Limpar campos" />
 			</form>
 		</div>
-
 	</div>
 </body>
 
