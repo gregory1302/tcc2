@@ -20,14 +20,14 @@ a:hover {
 #cad-conteiner {
     background-color: #72cdfe;
     display: flex;
-    width: 1250px;
-    height: 600px;
+    width: 1200px;
+    height: 550px;
     border-radius: 10px;
-    margin-left: 50px;
-    margin-top: 7vh;
+    margin-left: 40px;
+    margin-top: 2vh;
 }
 .idoso{
-    background-color: green;
+    /* background-color: green; */
     margin-left: 10px;
 
 }
@@ -38,27 +38,31 @@ a:hover {
     text-align: left;
     width: 400px;
     height: 580px;
-    padding: 50px 70px;
-margin-left: 30px;
-background: blue;
+    padding: 20px 70px;
+margin-left: 0px;
+padding-right: 10px;
+/* background: blue; */
 }
 .idoso2{
     margin-top: 10px;
     margin-bottom: 10px;
-background-color: red;
+/* background-color: red; */
     width: 400px;
-    padding: 50px 70px;
+    padding: 20px 70px;
     text-align: left;
+    padding-right: 5px;
+    margin-right: 30px;
 }
 
 .resp{
     margin-top: 10px;
     margin-bottom: 10px;
     width: 400px;
-    background-color: pink;
-    padding: 50px 70px;
+    /* background-color: pink; */
+    padding: 20px 70px;
     margin-right: 10px;
     text-align: left;
+    padding-right: 40px;
 }
 #cad-conteiners {
     background-color: #72cdfe;
@@ -84,12 +88,26 @@ background-color: red;
 }
 /*input{
      width: 50px; */
-/* }
-.titulo{
-    background-color: aquamarine;
+/* }*/
+/* .titulo{
+    
+    border-radius: 10px;
     display: flex;
+} 
+#titulo1, #titulo2 {
+    background-color: aquamarine;
+}*/
+#titulo1 {
+    background-color: rgb(19, 165, 214);
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-left: 100px;
+    width: 300px;
     text-align: center;
-} */
+}/*
+#titulo2 {
+    width: 200px;
+margin-left: 300px;}*/
 #cad-conteiner3 {
    /* background-color: rgb(99, 149, 240);*/
     background-color: #72cdfe;

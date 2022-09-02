@@ -17,14 +17,20 @@
 <body>
 	<?php include("navbar.html"); ?>
 	<title>Cadastro Idosos</title>
+	<!-- <div class="titulo"> -->
+	<div id="titulo1" class="titulo">
+		<h2>Cadastro do Idoso</h2>
+	</div>
+	<!-- <div id="titulo2" class="titulo">
+			<h3>Responsavel</h3>
+		</div>
+	</div> -->
 	<div id="cad-conteiner">
 		<div class="idoso">
 			<form action="recebeidoso.php" method="POST">
 
 				<div class="idoso1">
-					<div class="titulo">
-						<!-- <h3>Idoso</h3> -->
-					</div>
+
 
 					<label>Nome</label> <input class='form-control' type="text" name="nome">
 					<label>Data de Nascimento</label><br> <input class='form-control' type="date" size="25" placeholder="__/__/____" name="nascimento">

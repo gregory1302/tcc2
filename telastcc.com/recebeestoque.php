@@ -17,10 +17,13 @@
     <?php
     include("navbar.html");
     include("conexao.php");
+
     $idremedio = $_POST['idremedio'];
     $quant_caixa = $_POST['quant_caixa'];;
     $unid_caixa = $_POST['unid_caixa'];
     $obs = $_POST['obs'];
+    $add_cp = $quant_caixa * $unid_caixa;
+    echo 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk' . $add_cp;
     ?>
 
 
@@ -41,11 +44,13 @@
                         <td> <?php echo $quant_caixa; ?></tr>
                         <td> <?php echo 'Remedios por Caixa: '; ?></td>
                         <td> <?php echo $unid_caixa; ?></tr>
+                        <td> <?php echo 'Comprimidos adicionados no Estoque: '; ?></td>
+                        <td> <?php echo $add_cp; ?></tr>
                         <td> <?php echo 'Observação: '; ?></td>
                         <td> <?php echo $obs; ?></tr>
         </div>
-        <?php $sql = "INSERT INTO estoque (idremedio, caixas, unid_remed, obs)
-					VALUES ('$idremedio', '$quant_caixa', '$unid_caixa', '$obs')";
+        <?php $sql = "INSERT INTO estoque (idremedio, caixas, unid_remed, add_cp, obs)
+					VALUES ('$idremedio', '$quant_caixa', '$unid_caixa', '$add_cp', '$obs')";
 
         mysqli_query($con, $sql);
         //echo $sql;

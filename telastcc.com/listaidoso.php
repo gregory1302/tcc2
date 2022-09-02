@@ -55,7 +55,7 @@
 		<div id="lista-conteiner">
 			<table>
 				<tr>
-					<th class="id">ID</th>
+					<!-- <th class="id">ID</th> -->
 					<th class="texto">Nome</th>
 					<th class="text-center" colspan="2">Ação</th>
 				</tr>
@@ -69,7 +69,8 @@
 					?>
 
 						<tr>
-							<td class="id"><?php echo $linha['ididoso'] ?></td>
+							<!-- <td class="id"><?php //echo $linha['ididoso'] 
+												?></td> -->
 							<td class="texto"><?php echo $linha['nome_idoso'] ?></td>
 							<td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='dadoidosos.php?ididoso=<?php echo $linha['ididoso'] ?>'>
 									<i class='bx bxs-user'></i>

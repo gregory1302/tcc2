@@ -17,34 +17,7 @@
 <body>
     <?php
     include("navbar.html");
-    include("conexao.php");/*
-    $sql = "select * from estoque, medicamentos where estoque.idremedio = medicamentos.idremedio";
-    $rs = mysqli_query($con, $sql);
-    while ($linha = mysqli_fetch_array($rs)) { ?>
-        <div id="tabela-conteiner">
-            <div id="tabela-estoque">
-                <table class="table table-info table-bordered">
-                    <thead>
-                        <?php //  $totalremed = 
-                        //conseguir fazer os comprimidos e as caixas se somarem
-                        ?>
-                        <td> <?php echo 'id do remedio: '; ?></td>
-                        <td> <?php echo  $linha['idremedio']; ?></tr>
-                        <td> <?php echo 'nome: '; ?></td>
-                        <td> <?php echo  $linha['nome_remed']; ?></tr>
-                        <td> <?php echo 'Dosagem: '; ?></td>
-                        <td> <?php echo $linha['dosagem']; ?></tr>
-                        <td> <?php echo 'Descrição: '; ?></td>
-                        <td> <?php echo $linha['descricao']; ?></tr>
-                        <td> <?php echo 'Quantidade de Caixas: '; ?></td>
-                        <td> <?php echo $linha['caixas']; ?></tr>
-                        <td> <?php echo 'Comprimidos em Cada Caixa: '; ?></td>
-                        <td> <?php echo $linha['unid_remed']; ?></tr>
-                        <td> <?php echo 'Total de Comprimidos: '; ?></td>
-                        <td> <?php echo $linha['caixas']; ?></tr>
-                        <td> <?php echo 'Observação: '; ?></td>
-                        <td> <?php echo $linha['obs']; ?></tr><br>
-                        <?php } */ ?>
+    include("conexao.php"); ?>
     <div id="lista-conteiner">
         <table>
             <tr>

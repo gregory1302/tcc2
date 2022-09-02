@@ -35,13 +35,16 @@ td, th {
     border-style: solid;
     border-color: rgb(57, 166, 233);
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     font-size: x-large;
+
 }
+
 /* tamanho do nome dos idosos */
 td.texto, th.texto {
     width: 600px;
     height: 40px;
+    padding-left: 15px;
 }
 
 td.text-center, th.text-center {
