@@ -43,7 +43,7 @@
                         <td class="texto"><?php echo $linha['dosagem']; ?></td>
                         <td class="texto"><?php echo $linha['descricao']; ?></td>
                         <td class="texto"><?php echo $linha['caixas']; ?></td>
-                        <td class="texto"><?php echo $linha['unid_remed']; ?></td>
+                        <td class="texto"><?php echo $linha['unid_cp']; ?></td>
                         <td class="texto"><?php echo $linha['caixas']; ?></td>
                         <td class="texto"><?php echo $linha['obs']; ?></td>
 

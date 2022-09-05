@@ -213,13 +213,15 @@ background: #fff;
     text-decoration: none;
     color: inherit;
 }
-a {
-        all: unset; /* aqui você remove os estilos herdados */
-        /* aqui apenas os estilos que você quer */
-        color: aliceblue;
+.profile a {
+        
+        color: aliceblue;}
 
+        a {
+            all: unset;
+            cursor: pointer;
 }
-a:hover{
+.profile a:hover{
     color: #11101d;
     background: #fff;
     }

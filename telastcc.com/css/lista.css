@@ -22,7 +22,7 @@ a:hover {
     margin-right: 200px;
     padding: 20px 30px;
     overflow:auto; 
-    margin-top: 10vh;
+    margin-top: 10px;
     border-radius: 10px;
     
 }
@@ -62,4 +62,36 @@ td.id, th.id {
 .text-center i {
     font-size: 25px;
     margin-top: 7px;
+}
+
+
+.nome, .idoso {
+    /* font-size: 30px; */
+    border-bottom: 1px solid rgb(57, 166, 233);
+    /* border-top: 1px solid rgb(57, 166, 233); */
+    /* border-right: 1px solid rgb(57, 166, 233);
+    border-left: 1px solid rgb(57, 166, 233); */
+    width: 750px;
+    
+    text-align: left;
+    /* padding-top: 5px; */
+    padding-left: 15px;
+    /* border-radius: 10px; */
+    border-width: 3px;
+    margin-left: 3px;
+    display: grid;
+}
+.nome {
+    /* border-top: 1px solid rgb(57, 166, 233); */
+    border-width: 3px;
+    font-size: 5px;
+    height: 10px;
+}
+.idoso {
+    font-size: 30px;
+    height: 40px;
+}
+.pesquisa {
+    margin-left: 450px  ;
+    padding-top: 50px;
 }

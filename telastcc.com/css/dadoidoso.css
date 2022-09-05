@@ -12,13 +12,15 @@ body {
 }
 
 .tabela-conteiner {
-    margin-left: 150px;
+    background-color: #fff;
+    margin-left: 120px;
    display: flex;
+   border-radius: 10px;
 }
 /* dado do idoso */
 .um {
-    width: 600px;
-    margin-left: 10px;
+    width: 550px;
+    margin-left: 18px;
     margin-top: 20px;
     overflow: hidden;
     border-radius: 12px;
@@ -26,7 +28,7 @@ body {
 }
 /* dado do responsavel */
 .dois {
-    width: 600px;
+    width: 550px;
     margin-left: 40px;
     margin-top: 20px;
     overflow: hidden;
@@ -45,6 +47,16 @@ td.pergunta {
     align-items: center;
     color: inherit;
     left: 93%;
+    
+    
+}
+.botao {
+    padding-left: 8px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
 }
 
 a#cadastro {

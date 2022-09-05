@@ -32,9 +32,9 @@
         <h1>Login</h1>
         <form method="POST" action="listaidoso.php">
             <label for="login">Login</label>
-            <input type="login" name="login" id="login" placeholder="digite seu login" autocomplete="off">
+            <input type="login" name="login" id="login" placeholder="" autocomplete="off">
             <label for="password">Senha</label>
-            <input type="password" name="password" placeholder="digite a sua senha">
+            <input type="password" name="password" placeholder="">
             <input type="submit" value="Login">
 
 

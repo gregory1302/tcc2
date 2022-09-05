@@ -18,7 +18,10 @@
 </head>
 
 <body>
-	<?php /*
+	<?php
+
+
+	/*
 
 	session_start();
 
@@ -50,6 +53,13 @@
 			die;
 		}
 	} */ ?>
+	<form action="listaidoso.php" name="pesquisa_idoso">
+		<div class="pesquisa">
+			<label>Pesquise o nome do Idoso</label><br>
+			<input type="text" name="pesquisa_idoso">
+			<button>enviar</button>
+	</form>
+	</div>
 	<div>
 		<?php include("navbar.html")   ?>
 		<div id="lista-conteiner">
@@ -63,14 +73,43 @@
 
 					<?php
 					include("conexao.php");
+					if (isset($_GET['pesquisa_idoso'])) {
+						$pesquisa_idoso = "%" . trim($_GET['pesquisa_idoso']) . "%";
+						echo $pesquisa_idoso;
+						$sql = "SELECT * FROM 'idosos' WHERE 'nome_idoso' LIKE '%ju%'";
+						$rs = mysqli_query($con, $sql);
+						while ($linha = mysqli_fetch_array($rs)) {
+					?>
+
+							<tr>
+								<td class="texto"><?php echo $linha['nome_idoso'] ?></td>
+								<td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='dadoidosos.php?ididoso=<?php echo $linha['ididoso'] ?>'>
+										<i class='bx bxs-user'></i>
+
+										<!-- <td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='checagem_teste.php?ididoso=<?php echo $linha['ididoso'] ?>'><i class='bx bxs-check-square'></i> -->
+
+
+							</tr>
+						<?php }
+					} /*?>
+						$pesquisa_idoso = "%" . trim($_GET['pesquisa_idoso']) . "%";
+
+						$dbh = new PDO('mysql:host=127.0.0.1;dbname=medlar', 'root', '');
+
+						$sth = $dbh->prepare('SELECT * FROM ´idosos´ WHERE ´nome_idoso´ LIKE :nome');
+						$sth->bindParam(':nome', $nome, PDO::PARAM_STR);
+						$sth->execute();
+
+						$resultados = $sth->fetchAll(PDO::FETCH_ASSOC);
+						print_r($resultados);
+						exit;
+						}*/
 					$sql = "select * from idosos";
 					$rs = mysqli_query($con, $sql);
 					while ($linha = mysqli_fetch_array($rs)) {
-					?>
+						?>
 
 						<tr>
-							<!-- <td class="id"><?php //echo $linha['ididoso'] 
-												?></td> -->
 							<td class="texto"><?php echo $linha['nome_idoso'] ?></td>
 							<td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='dadoidosos.php?ididoso=<?php echo $linha['ididoso'] ?>'>
 									<i class='bx bxs-user'></i>
