@@ -54,10 +54,10 @@
 		}
 	} */ ?>
 	<form action="listaidoso.php" name="pesquisa_idoso">
-		<div class="pesquisa">
-			<label>Pesquise o nome do Idoso</label><br>
-			<input type="text" name="pesquisa_idoso">
-			<button>enviar</button>
+		<div class="search-box">
+			<!-- <label>Pesquise o nome do Idoso</label><br> -->
+			<input type="text" class="search-text" placeholder="pesquisar por idoso" name="pesquisa_idoso">
+			<button class="pesquisa"><i style="padding-top: 7px; padding-left: 2px; width: 50px; height: 20px" class='bx bx-search'></i></button>
 	</form>
 	</div>
 	<div>
