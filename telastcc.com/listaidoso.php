@@ -77,8 +77,7 @@
 					include("conexao.php");
 					if (isset($_GET['pesquisa_idoso'])) {
 						$pesquisa_idoso = "%" . trim($_GET['pesquisa_idoso']) . "%";
-						echo $pesquisa_idoso;
-						$sql = "SELECT * FROM 'idosos' WHERE 'nome_idoso' LIKE %pesquisa_idoso";
+						$sql = "SELECT * FROM idosos WHERE nome_idoso LIKE '$pesquisa_idoso'";
 						$rs = mysqli_query($con, $sql);
 						while ($linha = mysqli_fetch_array($rs)) {
 					?>

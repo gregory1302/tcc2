@@ -63,7 +63,7 @@
 						<td class="pergunta"> <?php echo 'nome: '; ?></td>
 						<td> <?php echo $linha['nome_idoso']; ?></tr>
 						<td class="pergunta"> <?php echo 'Data de Nascimento: '; ?></td>
-						<td> <?php echo $linha['nascimento']; ?></tr>
+						<td> <?php echo date_format(date_create($linha['nascimento']),"d/m/Y"); ?></tr>
 							<!-- <td class="pergunta"> <?php echo 'Enfermeira Responsavel: '; ?></td> -->
 							<!-- <td> <?php /* echo $linha['enfermeira']; */ ?></tr> -->
 						<td class="pergunta"> <?php echo 'CPF do paciente: '; ?></td>
