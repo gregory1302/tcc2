@@ -95,7 +95,7 @@ body{
     pointer-events: none;
     display: block;
 }
-.sidebar.active ul li .tooltip{
+.sidebar.active ul li{
     display: block;
 }
 /*.tooltip#cadremed {
@@ -224,4 +224,12 @@ background: #fff;
 .profile a:hover{
     color: #11101d;
     background: #fff;
+    }
+
+    #cadlinha {
+        width: 200px;
+    }
+
+    .sidebar.active .tooltip{
+        display: none;
     }

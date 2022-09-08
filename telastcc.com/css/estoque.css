@@ -50,9 +50,9 @@
         border-width: medium;
         border-style: solid;
         border-color: rgb(57, 166, 233);
-        border-radius: 10px;
+        /* border-radius: 10px; */
         text-align: center;
-        font-size: x-large;
+        font-size: 20px;
     }
     /* tamanho do nome dos idosos */
     td.texto, th.texto {
@@ -61,14 +61,14 @@
     }
     
     td.text-center, th.text-center {
-        width: 50px;
-        height: 40px;
+        width: 30px;
+        height: 20px;
         
     }
     
     td.id, th.id {
-        width: 50px;
-        height: 40px;
+        width: 30px;
+        height: 20px;
     }
     
     /* tamanho dos icones da lista */
@@ -76,3 +76,6 @@
         font-size: 25px;
         margin-top: 7px;
     }
+    thead{
+    background-color: #2ca0ff;
+}

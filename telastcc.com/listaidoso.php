@@ -56,19 +56,21 @@
 	<form action="listaidoso.php" name="pesquisa_idoso">
 		<div class="search-box">
 			<!-- <label>Pesquise o nome do Idoso</label><br> -->
-			<input type="text" class="search-text" placeholder="pesquisar por idoso" name="pesquisa_idoso">
+			<input type="text" class="search-text" placeholder="pesquisar nome" name="pesquisa_idoso">
 			<button class="pesquisa"><i style="padding-top: 7px; padding-left: 2px; width: 50px; height: 20px" class='bx bx-search'></i></button>
 	</form>
 	</div>
 	<div>
 		<?php include("navbar.html")   ?>
 		<div id="lista-conteiner">
-			<table>
-				<tr>
-					<!-- <th class="id">ID</th> -->
-					<th class="texto">Nome</th>
-					<th class="text-center" colspan="2">Ação</th>
-				</tr>
+			<table id="table" class="table table-striped table-primary">
+				<thead class="thead">
+					<tr>
+						<!-- <th class="id">ID</th> -->
+						<th class="texto">Nome</th>
+						<th class="text-center" colspan="2">Dados</th>
+					</tr>
+				</thead>
 				<tbody>
 
 					<?php
@@ -76,7 +78,7 @@
 					if (isset($_GET['pesquisa_idoso'])) {
 						$pesquisa_idoso = "%" . trim($_GET['pesquisa_idoso']) . "%";
 						echo $pesquisa_idoso;
-						$sql = "SELECT * FROM 'idosos' WHERE 'nome_idoso' LIKE '%ju%'";
+						$sql = "SELECT * FROM 'idosos' WHERE 'nome_idoso' LIKE %pesquisa_idoso";
 						$rs = mysqli_query($con, $sql);
 						while ($linha = mysqli_fetch_array($rs)) {
 					?>
@@ -91,7 +93,31 @@
 
 							</tr>
 						<?php }
-					} /*?>
+					} else {
+						$sql = "select * from idosos";
+						$rs = mysqli_query($con, $sql);
+						while ($linha = mysqli_fetch_array($rs)) {
+						?>
+
+							<tr>
+								<td class="texto"><?php echo $linha['nome_idoso'] ?></td>
+								<td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='dadoidosos.php?ididoso=<?php echo $linha['ididoso'] ?>'>
+										<i class='bx bxs-user'></i>
+
+										<!-- <td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='checagem_teste.php?ididoso=<?php echo $linha['ididoso'] ?>'><i class='bx bxs-check-square'></i> -->
+
+
+							</tr>
+					<?php }
+					} ?>
+
+		</div>
+	</div>
+	</tbody>
+
+	</table>
+	<?php
+	/*?>
 						$pesquisa_idoso = "%" . trim($_GET['pesquisa_idoso']) . "%";
 
 						$dbh = new PDO('mysql:host=127.0.0.1;dbname=medlar', 'root', '');
@@ -103,28 +129,7 @@
 						$resultados = $sth->fetchAll(PDO::FETCH_ASSOC);
 						print_r($resultados);
 						exit;
-						}*/
-					$sql = "select * from idosos";
-					$rs = mysqli_query($con, $sql);
-					while ($linha = mysqli_fetch_array($rs)) {
-						?>
-
-						<tr>
-							<td class="texto"><?php echo $linha['nome_idoso'] ?></td>
-							<td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='dadoidosos.php?ididoso=<?php echo $linha['ididoso'] ?>'>
-									<i class='bx bxs-user'></i>
-
-									<!-- <td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='checagem_teste.php?ididoso=<?php echo $linha['ididoso'] ?>'><i class='bx bxs-check-square'></i> -->
-
-
-						</tr>
-					<?php } ?>
-
-		</div>
-	</div>
-	</tbody>
-
-	</table>
+						}*/ ?>
 </body>
 
 </html>

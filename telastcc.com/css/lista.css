@@ -34,16 +34,19 @@ td, th {
     border-width: medium;
     border-style: solid;
     border-color: rgb(57, 166, 233);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     text-align: left;
     font-size: x-large;
 
+}
+#table {
+    border-radius: 10px;
 }
 
 /* tamanho do nome dos idosos */
 td.texto, th.texto {
     width: 600px;
-    height: 40px;
+    height: 30px;
     padding-left: 15px;
 }
 
@@ -57,7 +60,12 @@ td.id, th.id {
     width: 50px;
     height: 40px;
 }
-
+thead{
+    background-color: #2ca0ff;
+}
+.texto {
+    width: 30px;
+}
 /* tamanho dos icones da lista */
 .text-center i {
     font-size: 25px;

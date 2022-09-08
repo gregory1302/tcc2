@@ -19,17 +19,19 @@
     include("navbar.html");
     include("conexao.php"); ?>
     <div id="lista-conteiner">
-        <table>
-            <tr>
-                <th class="id">ID</th>
-                <th class="texto">Nome</th>
-                <th class="text-center">Dosagem</th>
-                <th class="texto">descricao</th>
-                <th class="texto">Quantidade de Caixas</th>
-                <th class="texto">Comprimidos em Cada Caixa</th>
-                <th class="texto">Total de Comprimidos</th>
-                <th class="texto">Observação</th>
-            </tr>
+        <table class="table table-primary">
+            <thead class="thead">
+                <tr>
+                    <th class="id">ID</th>
+                    <th class="texto">Nome</th>
+                    <th class="text-center">Dosagem</th>
+                    <th class="texto">descricao</th>
+                    <th class="texto">Quantidade de Caixas</th>
+                    <th class="texto">CP por Caixa</th>
+                    <th class="texto">Total de Comprimidos</th>
+                    <th class="texto">Observação</th>
+                </tr>
+            </thead>
             <tbody>
 
                 <?php
