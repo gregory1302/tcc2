@@ -34,19 +34,18 @@
   $cpf_resp = $_POST['cpf_resp'];
   $parentesco = $_POST['parentesco'];
   $enderecoresp = $_POST['enderecoresp'];
-  $sql = "INSERT INTO idosos (nome_idoso, nascimento, genero, alergia, comorbidade, obs, numero_sus, cpf, plano_saude, nome_resp, telefone_resp, cpf_resp, parentesco, endereco_resp) 
-    VALUES ('$nome', '$nasceu', '$genero', '$alergia', '$comorbidade',  '$obs', '$numerosus', '$cpf', '$planosaude', '$nomeresp', '$telefoneresp', '$cpf_resp', '$parentesco', '$enderecoresp')";
-  /*echo $sql;*/
+  $sql = "INSERT INTO idosos (nome_idoso, nascimento, genero, alergia, comorbidade, obs, cpf, nome_resp, telefone_resp, cpf_resp, parentesco, endereco_resp) 
+    VALUES ('$nome', '$nasceu', '$genero', '$alergia', '$comorbidade',  '$obs', '$cpf', '$nomeresp', '$telefoneresp', '$cpf_resp', '$parentesco', '$enderecoresp')";
   mysqli_query($con, $sql);
-  echo "usuario inserido com sucesso"; ?>
-
+  echo "usuario inserido com sucesso";
+  echo $sql; ?>
   <div class="tabela-conteiner">
     <table id="recebeidoso" class="table table-info table-bordered">
       <thead>
         <td> <?php echo 'nome: '; ?></td>
         <td> <?php echo $nome; ?></tr>
         <td> <?php echo 'Data de Nascimento: '; ?></td>
-        <td> <?php echo $nasceu; ?></tr>
+        <td> <?php echo date_format(date_create($linha['nascimento']), "d/m/Y"); ?></tr>
         <td> <?php echo 'CPF do paciente: '; ?></td>
         <td> <?php echo $cpf; ?></tr>
         <td> <?php echo 'Genero: '; ?></td>
@@ -55,8 +54,8 @@
         <td> <?php echo $alergia; ?></tr>
         <td> <?php echo 'Comorbidades: '; ?></td>
         <td> <?php echo $comorbidade; ?></tr>
-        <td> <?php echo 'Numero do SUS: '; ?></td>
-        <td> <?php echo $numerosus; ?></tr>
+       <?php /* <td> <?php echo 'Numero do SUS: '; ?></td>
+        <td> <?php echo $numerosus; ?></tr>*/ ?>
         <td> <?php echo 'Observações: '; ?></td>
         <td> <?php echo $obs; ?></tr>
       </thead>

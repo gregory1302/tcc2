@@ -40,6 +40,9 @@
 		<div class="botao"><a id="cadastro" style="padding: 25; width: 10px; height: 10px" class='btn btn-warning btn-sm' href='dadomedidoso.php?ididoso=<?php echo $ididoso ?>'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule" viewBox="0 0 16 16">
 					<path fill-rule="evenodd" d="M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429l4.243 4.242Z" />
 				</svg></a></div>
+				<div class="botao"><a id="cadastro" style="color: red; padding: 25; width: 10px; height: 10px" class='btn btn-warning btn-sm' href='editaridoso.php?ididoso=<?php echo $ididoso ?>'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule" viewBox="0 0 16 16">
+					<path fill-rule="evenodd" d="M1.828 8.9 8.9 1.827a4 4 0 1 1 5.657 5.657l-7.07 7.071A4 4 0 1 1 1.827 8.9Zm9.128.771 2.893-2.893a3 3 0 1 0-4.243-4.242L6.713 5.429l4.243 4.242Z" />
+				</svg></a></div>
 	</div>
 	<?php
 	$sql = "select * from idosos where ididoso=$ididoso";

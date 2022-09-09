@@ -66,7 +66,7 @@
 		<div class="idoso2">
 			<label>Alergias</label><br> <input class='form-control' type="text" name="alergia">
 			<label>Comorbidades</label> <input class='form-control' type="text" name="comorbidade">
-			<label>Numero do SUS</label> <input class='form-control' type="text" name="numerosus">
+			<!-- <label>Numero do SUS</label> <input class='form-control' type="text" name="numerosus"> -->
 			<label>Observaçôes</label> <textarea class='form-control' type="textarea " name="obs"></textarea>
 
 		</div>
