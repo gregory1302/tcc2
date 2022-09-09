@@ -8,10 +8,10 @@
   body {
     background-color: #AECAEF;
     background-size: cover;
-    background-position-x: 850px;
-    background-position-y: 100px;
+    /* background-position-x: 850px;
+    background-position-y: 100px; */
     margin-left: 170px;
-   
+    /* wrap=  "hard"; */
 }
 
 a:hover {
@@ -24,7 +24,7 @@ a:hover {
     height: 550px;
     border-radius: 10px;
     margin-left: 40px;
-    margin-top: 2vh;
+    /* margin-top: 2vh; */
 }
 .idoso{
     /* background-color: green; */
@@ -71,7 +71,7 @@ padding-right: 10px;
     margin-right: auto;
     padding: 10px 30px;
     margin-top: 15vh;
-    margin-left: 10px;
+    margin-left: 20%;
     border-radius: 10px;
     text-align: justify;
 }
@@ -79,12 +79,10 @@ padding-right: 10px;
     /* background-color: #fff; */
     border-radius: 10px;
     display: inline-block;
+    margin-right: 5px;
 }
 #botao {
     margin-top: 30px;
-}
-.gen {
-    /* margin-left: 30px; */
 }
 /*input{
      width: 50px; */
@@ -97,17 +95,24 @@ padding-right: 10px;
 #titulo1, #titulo2 {
     background-color: aquamarine;
 }*/
-#titulo1 {
+.titulo {
     background-color: rgb(19, 165, 214);
     border-radius: 10px;
     margin-top: 25px;
+    margin-bottom: 25px;
     margin-left: 100px;
     width: 300px;
     text-align: center;
-}/*
+    display: inline-block;
+}
 #titulo2 {
-    width: 200px;
-margin-left: 300px;}*/
+    background-color: #72cdfe;
+    margin-left: 40px;
+    width: 1200px;
+   /*display: inline-block;
+    float:left;
+ margin-left: 00px; */
+}
 #cad-conteiner3 {
    /* background-color: rgb(99, 149, 240);*/
     background-color: #72cdfe;

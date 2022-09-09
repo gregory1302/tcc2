@@ -22,29 +22,29 @@
         <table class="table table-primary">
             <thead class="thead">
                 <tr>
-                    <th class="id">ID</th>
+                    <!-- <th class="id">ID</th> -->
                     <th class="texto">Nome</th>
                     <th class="text-center">Dosagem</th>
                     <th class="texto">Quantidade de Caixas</th>
                     <th class="texto">Total de Comprimidos</th>
-                    <th class="texto">Observação</th>
+                    <!-- <th class="texto">Observação</th> -->
                 </tr>
             </thead>
             <tbody>
 
                 <?php
-                $sql = "select medicamentos.idremedio,SUM(estoque.unid_cp) as unid_cp,medicamentos.nome_remed as nome_remed,medicamentos.dosagem,SUM(estoque.caixas) as caixas from estoque, medicamentos where estoque.idremedio = medicamentos.idremedio group by estoque.idremedio";
+                $sql = "select medicamentos.idremedio,SUM(estoque.add_cp) as add_cp,medicamentos.nome_remed as nome_remed,medicamentos.dosagem,SUM(estoque.caixas) as caixas from estoque, medicamentos where estoque.idremedio = medicamentos.idremedio group by estoque.idremedio";
                 $rs = mysqli_query($con, $sql);
 
-while ($linha = mysqli_fetch_array($rs)) { ?>
+                while ($linha = mysqli_fetch_array($rs)) { ?>
 
                     <tr>
-                        <td class="id"><?php echo $linha['idremedio'] ?></td>
+                        <?php /*<td class="id"><?php echo $linha['idremedio'] ?></td> */ ?>
                         <td class="texto"><?php echo $linha['nome_remed']; ?></td>
-                        <td class="texto"><?php echo $linha['dosagem']; ?></td>
+                        <td class="texto"><?php echo $linha['dosagem'] . 'mg'; ?></td>
                         <td class="texto"><?php echo $linha['caixas']; ?></td>
-                        <td class="texto"><?php echo ($linha['unid_cp']* $linha['caixas']); ?></td>
-                        <td class="texto"><?php echo $linha['obs']; ?></td>
+                        <td class="texto"><?php echo $linha['add_cp']; ?></td>
+                        <!-- <td class="texto"><?php /* echo $linha['obs']; */ ?></td> -->
 
 
 

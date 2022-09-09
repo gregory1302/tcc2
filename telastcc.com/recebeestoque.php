@@ -21,7 +21,7 @@
     $idremedio = $_POST['idremedio'];
     $quant_caixa = $_POST['quant_caixa'];;
     $unid_caixa = $_POST['unid_caixa'];
-    $obs = $_POST['obs'];
+    // $obs = $_POST['obs'];
     $add_cp = $quant_caixa * $unid_caixa;
     echo 'kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk' . $add_cp;
     ?>
@@ -46,11 +46,11 @@
                         <td> <?php echo $unid_caixa; ?></tr>
                         <td> <?php echo 'Comprimidos adicionados no Estoque: '; ?></td>
                         <td> <?php echo $add_cp; ?></tr>
-                        <td> <?php echo 'Observação: '; ?></td>
-                        <td> <?php echo $obs; ?></tr>
+                            <?php /*<td> <?php echo 'Observação: '; ?></td>
+                            <td> <?php echo $obs; ?></tr> */ ?>
         </div>
-        <?php $sql = "INSERT INTO estoque (idremedio, caixas, unid_remed, add_cp, obs)
-					VALUES ('$idremedio', '$quant_caixa', '$unid_caixa', '$add_cp', '$obs')";
+        <?php $sql = "INSERT INTO estoque (idremedio, caixas, unid_cp, add_cp)
+					VALUES ('$idremedio', '$quant_caixa', '$unid_caixa', '$add_cp')";
 
         mysqli_query($con, $sql);
         //echo $sql;

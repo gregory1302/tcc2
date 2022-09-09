@@ -53,42 +53,46 @@
 		} elseif ($genero == 'M') {
 			$genero = 'Masculino';
 		}
-		?>
+		?><div id="titulo1" class="titulo">
+			<h2>Dados do Idoso</h2>
+		</div>
 		<div class="tabela-conteiner">
 			<div class="um">
+				<? php/* echo $linha['nome_idoso']; */ ?>
 				<table class="table table-info table-bordered">
 					<thead>
-						<td class="pergunta"> <?php echo 'id: '; ?></td>
-						<td> <?php echo  $linha['ididoso']; ?></tr>
-						<td class="pergunta"> <?php echo 'nome: '; ?></td>
+						<?php /*<td class="pergunta"> <?php echo 'id: '; ?></td> 
+						<td> <?php echo  $linha['ididoso']; ?></tr> */ ?>
+						<td class="pergunta"> <?php echo 'nome '; ?></td>
 						<td> <?php echo $linha['nome_idoso']; ?></tr>
-						<td class="pergunta"> <?php echo 'Data de Nascimento: '; ?></td>
-						<td> <?php echo date_format(date_create($linha['nascimento']),"d/m/Y"); ?></tr>
-							<!-- <td class="pergunta"> <?php echo 'Enfermeira Responsavel: '; ?></td> -->
-							<!-- <td> <?php /* echo $linha['enfermeira']; */ ?></tr> -->
-						<td class="pergunta"> <?php echo 'CPF do paciente: '; ?></td>
+						<td class="pergunta"> <?php echo 'Data de Nascimento '; ?></td>
+						<td> <?php echo date_format(date_create($linha['nascimento']), "d/m/Y"); ?></tr>
+						<td class="pergunta"> <?php echo 'CPF do paciente '; ?></td>
 						<td> <?php echo $linha['cpf']; ?></tr>
-						<td class="pergunta"> <?php echo 'Genero: '; ?></td>
+						<td class="pergunta"> <?php echo 'Genero '; ?></td>
 						<td> <?php echo $genero; ?></tr>
-						<td class="pergunta"> <?php echo 'Alergias: '; ?></td>
+						<td class="pergunta"> <?php echo 'Alergias '; ?></td>
 						<td> <?php echo $linha['alergia']; ?></tr>
-						<td class="pergunta"> <?php echo 'Comorbidades: '; ?></td>
+						<td class="pergunta"> <?php echo 'Comorbidades '; ?></td>
 						<td> <?php echo $linha['comorbidade']; ?></tr>
-						<td class="pergunta"> <?php echo 'Numero do SUS: '; ?></td>
-						<td> <?php echo $linha['numero_sus']; ?></tr>
-						<td class="pergunta"> <?php echo 'Observações: '; ?></td>
+							<?php /*	<td class="pergunta"> <?php echo 'Numero do SUS '; ?></td>
+						<td> <?php echo $linha['numero_sus']; ?></tr> */ ?>
+						<td class="pergunta"> <?php echo 'Observações '; ?></td>
 						<td> <?php echo $linha['obs']; ?></tr>
 				</table>
 			</div>
 			<div class="dois">
+				<!-- <p>Dados do Responsavel</p> -->
 				<table class="table table-primary table-bordered">
-					<td class="pergunta"> <?php echo 'Nome do Responsavel: '; ?></td>
+					<td class="pergunta"> <?php echo 'Nome do Responsavel '; ?></td>
 					<td> <?php echo $linha['nome_resp']; ?></tr>
-					<td class="pergunta"> <?php echo 'Telefone do Responsavel: '; ?></td>
+					<td class="pergunta"> <?php echo 'Telefone do Responsavel '; ?></td>
 					<td> <?php echo $linha['telefone_resp']; ?></tr>
-					<td class="pergunta"> <?php echo 'Grau de parentesco com o responsavel: '; ?></td>
+					<td class="pergunta"> <?php echo 'CPF '; ?></td>
+					<td> <?php echo $linha['cpf_resp']; ?></tr>
+					<td class="pergunta"> <?php echo 'Grau de parentesco '; ?></td>
 					<td> <?php echo $linha['parentesco']; ?></tr>
-					<td class="pergunta"> <?php echo 'Endereço do responsavel: '; ?></td>
+					<td class="pergunta"> <?php echo 'Endereço do responsavel '; ?></td>
 					<td> <?php echo $linha['endereco_resp']; ?></tr>
 				</table>
 				</tr>

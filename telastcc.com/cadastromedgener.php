@@ -18,10 +18,10 @@
 	<title>Cadastro Medicamentos</title>
 	<div id="cad-conteiners">
 		<form id="2" action="recebemedgener.php" method="POST">
-			<label>Nome:</label> <input class='form-control' type="text" name="nomeremed">
-			<label>Descrição:</label> <input class='form-control' type="text" name="descricao">
-			<label>Dosagem:</label> <input class='form-control' type="text" name="dosagem">
-			<label>Observações:</label> <input class='form-control' type="text" name="obs"><br>
+			<label>Nome</label> <input class='form-control' type="text" name="nomeremed">
+			<label>Descrição</label> <input class='form-control' type="text" name="descricao">
+			<label>Dosagem</label> <input class='form-control' type="text" name="dosagem">
+			<label>Observações</label> <input class='form-control' type="text" name="obs"><br>
 			<input class='btn btn-success' type="submit" value="Enviar" name="btnSalvar" />
 			<input class='btn btn-info' type="reset" value="Limpar campos" />
 	</div>
