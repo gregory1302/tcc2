@@ -84,7 +84,7 @@
 
 							<tr>
 								<td class="texto"><?php echo $linha['nome_idoso'] ?></td>
-								<td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='dadoidosos.php?ididoso=<?php echo $linha['ididoso'] ?>'>
+								<td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-success btn-sm' href='dadoidosos.php?ididoso=<?php echo $linha['ididoso'] ?>'>
 										<i class='bx bxs-user'></i>
 
 										<!-- <td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='checagem_teste.php?ididoso=<?php echo $linha['ididoso'] ?>'><i class='bx bxs-check-square'></i> -->
@@ -100,7 +100,7 @@
 
 							<tr>
 								<td class="texto"><?php echo $linha['nome_idoso'] ?></td>
-								<td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='dadoidosos.php?ididoso=<?php echo $linha['ididoso'] ?>'>
+								<td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-primary btn-sm' href='dadoidosos.php?ididoso=<?php echo $linha['ididoso'] ?>'>
 										<i class='bx bxs-user'></i>
 
 										<!-- <td class="text-center"><a style="width: 50px; height: 40px" class='btn btn-warning btn-sm' href='checagem_teste.php?ididoso=<?php echo $linha['ididoso'] ?>'><i class='bx bxs-check-square'></i> -->
